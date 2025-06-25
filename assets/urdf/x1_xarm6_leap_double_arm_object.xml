@@ -86,48 +86,39 @@
             <joint name="dummy_joint" type="free" />
             <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="base_link" />
             <geom name="ranger_base" type="mesh" rgba="1 1 1 1" mesh="base_link" />
-            <!-- <geom pos="-0.0244824 -0.37251 0.279423" quat="0 0 0.710185 0.704015" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="Box_Link" />
-            <geom pos="-0.0244824 -0.37251 0.279423" quat="0 0 0.710185 0.704015" type="mesh" rgba="1 1 1 1" mesh="Box_Link" /> -->
-            <!-- <geom pos="-0.133 -0.214889 0.292686" quat="0.502177 0.497814 0.497814 -0.502177" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l1_Link" />
-            <geom pos="-0.133 -0.214889 0.292686" quat="0.502177 0.497814 0.497814 -0.502177" type="mesh" rgba="1 1 1 1" mesh="l1_Link" /> -->
-            <!-- <geom pos="-0.1555 -0.215421 0.231689" quat="0.710185 0.704015 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="a1_Link" />
-            <geom pos="-0.1555 -0.215421 0.231689" quat="0.710185 0.704015 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="a1_Link" /> -->
-            <!-- <geom pos="-0.1555 -0.184282 1.22145" quat="0.7071 -0.00308533 -0.7071 0.00308533" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l2_Link" />
-            <geom pos="-0.1555 -0.184282 1.22145" quat="0.7071 -0.00308533 -0.7071 0.00308533" type="mesh" rgba="1 1 1 1" mesh="l2_Link" /> -->
-            <!-- <geom pos="0.27 -0.161194 1.28876" quat="-0.497814 0.502177 -0.502177 -0.497814" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="a2_Link" />
-            <geom pos="0.27 -0.161194 1.28876" quat="-0.497814 0.502177 -0.502177 -0.497814" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="a2_Link" /> -->
-            <!-- <geom pos="0.29 -0.138499 1.31106" quat="0.00308533 0.7071 -0.7071 0.00308533" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l3_Link" />
-            <geom pos="0.29 -0.138499 1.31106" quat="0.00308533 0.7071 -0.7071 0.00308533" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l3_Link"/>
-            <geom pos="-0.21 -0.138499 1.31106" quat="0.00308533 0.7071 -0.7071 0.00308533" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l3_Link" />
-            <geom pos="-0.21 -0.138499 1.31106" quat="0.00308533 0.7071 -0.7071 0.00308533" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l3_Link"/>
-            <geom pos="0.04 -0.138499 1.31106" quat="0.00308533 0.7071 -0.7071 0.00308533" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l3_Link" />
-            <geom pos="0.04 -0.138499 1.31106" quat="0.00308533 0.7071 -0.7071 0.00308533" type="mesh" rgba="1 1 1 1" mesh="l3_Link" /> -->            
-            <!-- <geom pos="0.25 -0.104073 1.32024" quat="0 0 -0.868199 -0.496217" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
-            <geom pos="0.25 -0.104073 1.32024" quat="0 0 -0.868199 -0.496217" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
-            <geom pos="-0.25 -0.104073 1.32024" quat="0 0 -0.868199 -0.496217" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
-            <geom pos="-0.25 -0.104073 1.32024" quat="0 0 -0.868199 -0.496217" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />            
-            <geom pos="0 -0.104073 1.32024" quat="0 0 -0.868199 -0.496217" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
-            <geom pos="0 -0.104073 1.32024" quat="0 0 -0.868199 -0.496217" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" /> -->
-            <!-- <geom pos="0.088 -0.215281 0.247688" quat="0.710185 0.704015 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l4_Link" />
-            <geom pos="0.088 -0.215281 0.247688" quat="0.710185 0.704015 0 0" type="mesh" rgba="1 1 1 1" mesh="l4_Link" /> -->
-            <!-- <geom pos="0.1555 -0.215421 0.231689" quat="0.710185 0.704015 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="a3_Link" />
-            <geom pos="0.1555 -0.215421 0.231689" quat="0.710185 0.704015 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="a3_Link" /> -->
-            <!-- <geom pos="0.1555 -0.138891 1.26606" quat="0.497814 -0.502177 0.497814 -0.502177" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l5_Link" />
-            <geom pos="0.1555 -0.138891 1.26606" quat="0.497814 -0.502177 0.497814 -0.502177" type="mesh" rgba="1 1 1 1" mesh="l5_Link" /> -->
+            
+            <!-- Mirrored a4_Link (left side, negated Y-position) -->
+            <geom pos="0.1575 -0.1699 0.266828" quat="0.502177 0.497814 -0.497814 0.502177" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="a4_Link" />
+            <geom pos="0.1575 -0.1699 0.266828" quat="0.502177 0.497814 -0.497814 0.502177" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="a4_Link" />            
+            <!-- Mirrored a5_Link (left side, negated Y-position) -->
+            <geom pos="0.1575 -0.0650999 0.267742" quat="0.502177 0.497814 -0.497814 0.502177" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="a5_Link" />
+            <geom pos="0.1575 -0.0650999 0.267742" quat="0.502177 0.497814 -0.497814 0.502177" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="a5_Link" />
+            <!-- Mirrored base (left side, negated Y-position) -->
+            <geom pos="0 -0.118467 0.297778" quat="0.706818 0.0030841 0.00308655 -0.707382" type="mesh" contype="0" conaffinity="0" group="1" mesh="base" />
+            <geom pos="0 -0.118467 0.297778" quat="0.706818 0.0030841 0.00308655 -0.707382" type="mesh" mesh="base" />
+
+            <!-- Original a4_Link (right side) -->
             <geom pos="0.1575 0.1699 0.266828" quat="0.502177 0.497814 -0.497814 0.502177" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="a4_Link" />
             <geom pos="0.1575 0.1699 0.266828" quat="0.502177 0.497814 -0.497814 0.502177" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="a4_Link" />
+            <!-- Original a5_Link (right side) -->
             <geom pos="0.1575 0.0650999 0.267742" quat="0.502177 0.497814 -0.497814 0.502177" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="a5_Link" />
             <geom pos="0.1575 0.0650999 0.267742" quat="0.502177 0.497814 -0.497814 0.502177" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="a5_Link" />
+            <!-- Original base (right side) -->
             <geom pos="0 0.118467 0.297778" quat="0.706818 -0.0030841 0.00308655 0.707382" type="mesh" contype="0" conaffinity="0" group="1" mesh="base" />
             <geom pos="0 0.118467 0.297778" quat="0.706818 -0.0030841 0.00308655 0.707382" type="mesh" mesh="base" />
-            <!-- <geom pos="-0.113 0.237202 0.243739" quat="0.502177 0.497814 -0.502177 -0.497814" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l6_Link" />
-            <geom pos="-0.113 0.237202 0.243739" quat="0.502177 0.497814 -0.502177 -0.497814" type="mesh" rgba="1 1 1 1" mesh="l6_Link" />-->
-            <!-- <geom pos="0.113 0.237202 0.243739" quat="0.502177 0.497814 -0.502177 -0.497814" type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="l7_Link" />
-            <geom pos="0.113 0.237202 0.243739" quat="0.502177 0.497814 -0.502177 -0.497814" type="mesh" rgba="1 1 1 1" mesh="l7_Link" /> -->
+            
+            <!-- Mirrored arm_base (left side, negated Y-position) -->
+            <body name="arm_base_left" pos="0 -0.118467 0.297778" quat="1 0.0 0.0 0.0">
+                <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="Arm_base_Link" />
+                <geom type="mesh" rgba="1 1 1 1" mesh="Arm_base_Link" />
+            </body>
+
+            <!-- Original arm_base (right side) -->
             <body name="arm_base" pos="0 0.118467 0.297778" quat="1 0.0 0.0 0.0" >
                 <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="Arm_base_Link" />
                 <geom type="mesh" rgba="1 1 1 1" mesh="Arm_base_Link" />
             </body>
+
             <body name="Suspension1_Link" pos="-0.182 -0.245893 0.12045" quat="0.99999 -0.00436331 0 0">
                 <inertial pos="0.0562358 0.0136672 -0.0689303" quat="0.480602 -0.109201 -0.000258328 0.870113" mass="0.258645" diaginertia="0.000990911 0.000881135 0.000289082" />
                 <joint name="steer_rl" pos="0 0 0" axis="0 0 1" />
@@ -176,6 +167,33 @@
                     <geom name="Wheel4" size="0.0935 0.026" pos="-0.0185 0 0" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.2 0.2 0.2 1" />
                 </body>
             </body>
+
+
+            <!-- Mirrored Left Arm -->
+            
+            <body name="link1_left" pos="0 -0.120797 0.564767" quat="0.706818 0.0030841 0.00308655 -0.707382">
+                <inertial pos="-0.002 -0.02692 -0.01332" quat="0.983139 -0.180751 -0.00455228 -0.0272976" mass="2.16" diaginertia="0.00539487 0.00519906 0.00281397" />
+                
+                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="link1" />
+                <geom type="mesh" mesh="link1" />
+
+                <body name="link2_left" pos="0 0 0" quat="0.707105 -0.707108 0 0">
+                    <inertial pos="0.03531 -0.21398 0.03386" quat="0.71118 0.614686 0.139936 -0.311132" mass="1.71" diaginertia="0.017867 0.017867 0.017867" />
+                    
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="link2" />
+                    <geom type="mesh" mesh="link2" />
+
+                    <body name="link3_left" pos="0.0535 -0.2845 0">
+                        <inertial pos="0.06781 0.10749 0.01457" quat="0.119516 0.409082 -0.734824 0.527638" mass="1.384" diaginertia="0.004543 0.004543 0.004543" />
+
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="link3" />
+                        <geom type="mesh" mesh="link3" />
+                    
+                    </body>
+                </body>
+            </body>
+                
+            <!-- Original Right Arm -->
             <body name="link1" pos="0 0.120797 0.564767" quat="0.706818 -0.0030841 0.00308655 0.707382">
                 <inertial pos="-0.002 0.02692 -0.01332" quat="0.983139 0.180751 -0.00455228 0.0272976" mass="2.16" diaginertia="0.00539487 0.00519906 0.00281397" />
                 <joint name="joint1" pos="0 0 0" axis="0 0 1" limited="true" range="-6.28319 6.28319" damping="1" frictionloss="1" />
@@ -325,6 +343,7 @@
                     </body>
                 </body>
             </body>
+
         </body>
         <body name="object" pos="0.4 1.25 1.2">
             <inertial pos="0.0 0 0" quat="1 0.0 -0.0 -0.0" mass="0.25" diaginertia="7.33516e-05 7.33516e-05 7.33516e-05" />
