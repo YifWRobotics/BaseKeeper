@@ -619,9 +619,9 @@ class DcmmVecEnv(gym.Env):
 
     def random_object_pose(self):
         if self.global_task == "Bounce":
-            x = 0.05 * np.random.rand() 
-            y = 0.65 + 0.01 * np.random.rand()
-            height = 0.85
+            x = 1.05 * np.random.rand() 
+            y = 1.65 + 0.01 * np.random.rand()
+            height = 12.00
             v_lin_x = 0.0
             v_lin_y = 0.0
             v_lin_z = 0.0
@@ -701,7 +701,7 @@ class DcmmVecEnv(gym.Env):
         # self.Dcmm.set_throw_pos_vel(pose=np.array([0.0, 0.4, 1.0, 1.0, 0.0, 0.0, 0.0]),
         #                             velocity=np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0]))
         # Random Gravity
-        self.Dcmm.model.opt.gravity[2] = -9.81 + 0.5*np.random.uniform(-1, 1)
+        self.Dcmm.model.opt.gravity[2] = -9.81 + 0.05 *np.random.uniform(-1, 1)
         # Random PID
         self.random_PID()
         # Random Delay
@@ -785,14 +785,54 @@ class DcmmVecEnv(gym.Env):
             reward_constraint = 0 if self.arm_limit else -1
             reward_constraint *= DcmmCfg.reward_weights["r_constraint"]
 
+            ## Observations
+            '''
+            obs = {
+                "base": {
+                    "v_lin_2d": self._get_base_vel() + np.random.normal(0, self.k_obs_base, 2),
+                },
+                "arm": {
+                    "ee_pos3d": ee_pos3d + np.random.normal(0, self.k_obs_arm, 3),
+                    "ee_quat": self._get_relative_ee_quat() + np.random.normal(0, self.k_obs_arm, 4),
+                    'ee_v_lin_3d': (ee_pos3d - self.prev_ee_pos3d)*self.fps + np.random.normal(0, self.k_obs_arm, 3),
+                    "joint_pos": np.array(self.Dcmm.data.qpos[15:21]) + np.random.normal(0, self.k_obs_arm, 6),
+                },
+                "hand": self._get_hand_obs() + np.random.normal(0, self.k_obs_hand, 12),
+                "object": {
+                    "pos3d": obj_pos3d + np.random.normal(0, self.k_obs_object, 3),
+                    # "v_lin_3d": self._get_relative_object_v_lin_3d() + np.random.normal(0, self.k_obs_object, 3),
+                    "v_lin_3d": (obj_pos3d - self.prev_obj_pos3d)*self.fps + np.random.normal(0, self.k_obs_object, 3),
+                },
+            }
+            '''
+            # end-effector
+            ee_pos3d = obs["arm"]["ee_pos3d"]
+            ee_quat = obs["arm"]["ee_quat"]
+            ee_v_lin_3d = obs["arm"]["ee_v_lin_3d"]
+            # ball
+            object_pos3d = obs["object"]["pos3d"]
+            object_v_lin_3d = obs["object"]["v_lin_3d"]
+
+            print("a_vel", self._get_relative_object_v_lin_3d())
+            print("a_vel", np.linalg.norm( self._get_relative_object_v_lin_3d()))
+
             if self.task == "Catching":
                 reward_orient = 0.0
                 if self.stage == "pushing":
                     rewards = reward_orient + reward_collision + reward_constraint
+                
+                elif self.stage == "tracking":
+                    rewards = reward_orient + reward_collision + reward_constraint
+
                 elif self.stage == "absorbing":
-                    rewards = reward_orient + reward_collision + reward_constraint
-                elif self.stage == "releasing":
-                    rewards = reward_orient + reward_collision + reward_constraint
+                    ## Absorption Reward
+                    # Reward for matching the hand's upward velocity with the ball's velocity
+                    
+                    reward_relative_velocity = np.linalg.norm(ee_v_lin_3d - object_v_lin_3d) * DcmmCfg.reward_weights["r_relative_velocity"]
+                    reward_relative_position = np.linalg.norm(ee_pos3d - object_pos3d) * DcmmCfg.reward_weights["r_relative_position"]
+
+                    reward_absorption = velocity_match * DcmmCfg.reward_weights["r_absorption"]
+                
 
             return rewards
 

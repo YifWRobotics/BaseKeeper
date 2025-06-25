@@ -1,0 +1,1 @@
+nvidia-smi | awk '$5 ~ /^[0-9]+$/ && $7 == "python" {print $5}' | xargs -r sudo kill -9

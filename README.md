@@ -117,15 +117,15 @@ We provide our tracking model and catching model trained in a two-stage manner, 
 
 Under the root `catch_it`: run either
 ```bash
-python3 train_DCMM.py test=True task=Tracking num_envs=1 checkpoint_tracking="/home/yifan/Robotics/Catch_It/assets/models/track.pth" object_eval=False viewer=True imshow_cam=True
-python3 train_DCMM.py test=True task=Tracking num_envs=1 checkpoint_tracking="/home/yifan/Robotics/Catch_It/assets/models/track.pth" object_eval=True viewer=True imshow_cam=True
+python3 train_DCMM.py test=True task=Tracking num_envs=1 checkpoint_tracking="/home/yifan/Robotics/BaseKeeper/assets/models/track.pth" object_eval=False viewer=True imshow_cam=True
+python3 train_DCMM.py test=True task=Tracking num_envs=1 checkpoint_tracking="/home/yifan/Robotics/BaseKeeper/assets/models/track.pth" object_eval=True viewer=True imshow_cam=True
 ```
 ### Testing on the Catching Task
 
 Under the root `catch_it`: run either
 ```bash
-python3 train_DCMM.py test=True task=Catching_TwoStage num_envs=1 checkpoint_catching="/home/yifan/Robotics/Catch_It/assets/models/catch_two_stage.pth" object_eval=False viewer=True imshow_cam=True
-python3 train_DCMM.py test=True task=Catching_TwoStage num_envs=1 checkpoint_catching="/home/yifan/Robotics/Catch_It/assets/models/catch_two_stage.pth" object_eval=True viewer=True imshow_cam=True
+python3 train_DCMM.py test=True task=Catching_TwoStage num_envs=1 checkpoint_catching="/home/yifan/Robotics/BaseKeeper/assets/models/catch_two_stage.pth" object_eval=False viewer=True imshow_cam=True
+python3 train_DCMM.py test=True task=Catching_TwoStage num_envs=1 checkpoint_catching="/home/yifan/Robotics/BaseKeeper/assets/models/catch_two_stage.pth" object_eval=True viewer=True imshow_cam=True
 ```
 
 ## Two-Stage Training From Scratch
