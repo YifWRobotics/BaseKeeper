@@ -206,7 +206,8 @@
                                     <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="link6" />
                                     <geom type="mesh" mesh="link6" />
 
-                                    <geom pos="0.0375 -0.0375 0.0" axisangle="1 -1 -1 2.1" type="mesh" contype="0" conaffinity="0" group="1" mesh="p1_Link" />
+                                    <!-- Reflected p1 link -->
+                                    <geom pos="-0.0375 -0.0375 0.0" axisangle="-1 -1 -1 -2.1" type="mesh" contype="0" conaffinity="0" group="1" mesh="p1_Link" />
 
                                     <geom pos="0.00 -0.067 0.028" axisangle="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
                                     <geom pos="0.00 -0.067 0.028" axisangle="1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
