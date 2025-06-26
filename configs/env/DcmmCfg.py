@@ -25,14 +25,16 @@ WEIGHT_PATH = os.path.join(ASSET_PATH, "weights")
 distance_thresh = 0.25
 
 ## Define the initial joint positions of the arm and the hand
-if global_task == "Bounce":
-    arm_joints = np.array([
-    0.0, 0.0, -2.0, 0.0, 2.25, -1.5 
-    ])
-elif global_task == "Original":
-    arm_joints = np.array([
-    0.0, 0.0, -0.0, 3.07, 2.25, -1.5 
-    ])
+# if global_task == "Bounce":
+#     arm_joints = np.array([
+#     0.0, 0.0, -2.0, 0.0, 2.25, -1.5 
+#     ])
+# elif global_task == "Original":
+#     arm_joints = np.array([
+#     0.0, 0.0, -0.0, 3.07, 2.25, -1.5 
+#     ])
+
+arm_joints = np.array([ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ])
 
 hand_joints = np.array([
     0.0, 0.0, 0.0, 0.0,

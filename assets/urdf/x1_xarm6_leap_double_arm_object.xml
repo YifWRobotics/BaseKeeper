@@ -169,8 +169,7 @@
             </body>
 
 
-            <!-- Mirrored Left Arm -->
-            
+            <!-- Rotated Left Arm: link1_left quat = [w,x,y,z]<->[w,-x,y,-z], pos = [x,y,z]<->[x,-y,z], other links are kept the same as original right arm -->
             <body name="link1_left" pos="0 -0.120797 0.564767" quat="0.706818 0.0030841 0.00308655 -0.707382">
                 <inertial pos="-0.002 -0.02692 -0.01332" quat="0.983139 -0.180751 -0.00455228 -0.0272976" mass="2.16" diaginertia="0.00539487 0.00519906 0.00281397" />
                 
@@ -186,9 +185,36 @@
                     <body name="link3_left" pos="0.0535 -0.2845 0">
                         <inertial pos="0.06781 0.10749 0.01457" quat="0.119516 0.409082 -0.734824 0.527638" mass="1.384" diaginertia="0.004543 0.004543 0.004543" />
 
-                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="link3" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="link3" />
                         <geom type="mesh" mesh="link3" />
-                    
+
+                        <body name="link4_left" pos="0.0775 0.3425 0" quat="0.707105 -0.707108 0 0">
+                            <inertial pos="-0.00021 0.02578 -0.02538" quat="0.994019 0.0752563 -0.00686804 0.0788347" mass="1.115" diaginertia="0.00440091 0.00406855 0.00103407" />
+
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="link4" />
+                            <geom type="mesh" mesh="link4" />
+
+                            <body name="link5_left" pos="0 0 0" quat="0.707105 0.707108 0 0">
+                                <inertial pos="0.05428 0.01781 0.00543" quat="-0.0766302 0.578118 -0.269638 0.766291" mass="1.275" diaginertia="0.00289757 0.0023276 0.000951789" />
+
+                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="link5" />
+                                <geom type="mesh" mesh="link5" />
+
+                                <body name="link6_left" pos="0.076 0.097 0" quat="0.707105 -0.707108 0 0">
+                                    <camera name="wrist_left" mode="fixed" pos="0.0 -0.068 0.0175" quat="0.0 1.0 0.0 0.0" fovy="43"/>
+                                    <inertial pos="0.00464754 0.0302493 0.031817" quat="0.69781 -0.354303 0.155913 0.602678" mass="0.61428" diaginertia="0.00108383 0.000910552 0.000410862" />
+                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="link6" />
+                                    <geom type="mesh" mesh="link6" />
+
+                                    <geom pos="0.0375 -0.0375 0.0" axisangle="1 -1 -1 2.1" type="mesh" contype="0" conaffinity="0" group="1" mesh="p1_Link" />
+
+                                    <geom pos="0.00 -0.067 0.028" axisangle="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
+                                    <geom pos="0.00 -0.067 0.028" axisangle="1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
+
+                                    
+                                </body>        
+                            </body>
+                        </body>
                     </body>
                 </body>
             </body>
@@ -236,7 +262,7 @@
                                     <geom pos="0.00 -0.067 0.028" axisangle="1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
                                     <geom pos="0 0.045 0.0325" quat="0.500398 -0.499602 -0.5 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.2 0.2 0.2 1" mesh="hand_link" />
                                     <geom pos="0 0.045 0.0325" quat="0.500398 -0.499602 -0.5 -0.5" type="mesh" rgba="0.2 0.2 0.2 1" mesh="hand_link" />
-                                    <!-- Leap Hand -->
+                                    <!-- Original Leap Hand -->
                                     <body name="mcp_joint" pos="0.0630634 0.0529529 0.0287337" quat="-0.707106 0.000281544 0.707107 -0.000844632">
                                         <inertial pos="0 0 0" quat="0.388585 0.626468 -0.324549 0.592628" mass="0.044" diaginertia="1.47756e-05 1.31982e-05 6.0802e-06" />
                                         <joint name="1" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.314 2.23" />
