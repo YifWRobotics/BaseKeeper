@@ -60,9 +60,11 @@
         <mesh name="link6" file="link6.stl" />
         <mesh name="p1_Link" file="p1_Link.STL" />
         <mesh name="hand_link" file="hand_link.STL" />
+        <mesh name="hand_link_left" file="/home/yifan/Robotics/BaseKeeper/hand_link_left.stl"/>
         <!-- Leap Hand -->
         <mesh name="palm_lower" file="palm_lower.stl" />
         <mesh name="mcp_joint" file="mcp_joint.stl" />
+        <mesh name="mcp_joint_left" file="/home/yifan/Robotics/BaseKeeper/mcp_joint_left.stl" />
         <mesh name="pip" file="pip.stl" />
         <mesh name="dip" file="dip.stl" />
         <mesh name="fingertip" file="fingertip.stl" />
@@ -206,13 +208,21 @@
                                     <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="link6" />
                                     <geom type="mesh" mesh="link6" />
 
-                                    <!-- Reflected p1 link -->
+                                    <!-- Reflected p1 link: pos = [x, y, z]<->[-x, -y, z], axis angle = [x, y, z, theta]<->[-x, y, z, -theta] -->
                                     <geom pos="-0.0375 -0.0375 0.0" axisangle="-1 -1 -1 -2.1" type="mesh" contype="0" conaffinity="0" group="1" mesh="p1_Link" />
 
-                                    <geom pos="0.00 -0.067 0.028" axisangle="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
-                                    <geom pos="0.00 -0.067 0.028" axisangle="1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
+                                    <!-- Reflected wrist camera link: transformation same as reflected p1 link -->
+                                    <geom pos="-0.00 0.067 0.028" axisangle="-1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
+                                    <geom pos="-0.00 0.067 0.028" axisangle="-1 0 0 0" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Camera_Link" />
 
+                                    <!-- Left hand link-->
+                                    <geom pos="0 -0.045 0.0325" quat="0.500398 -0.499602 -0.5 -0.5" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.2 0.2 0.2 1" mesh="hand_link_left" />
+                                    <geom pos="0 -0.045 0.0325" quat="0.500398 -0.499602 -0.5 -0.5" type="mesh" rgba="0.2 0.2 0.2 1" mesh="hand_link_left" />
+                                   
+                                    <!-- Left Leap Hand -->
                                     
+                                    
+
                                 </body>        
                             </body>
                         </body>
